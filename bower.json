@@ -1,0 +1,15 @@
+{
+  "name": "5e-trap-generator",
+  "description": "A small example Angular project that lets you generate traps for the fifth edition of a popular roleplaying game",
+  "version": "0.0.0",
+  "homepage": "https://github.com/GregoryAveryWeir/5e-trap-generator",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "html5-boilerplate": "~4.3.0"
+  }
+}
