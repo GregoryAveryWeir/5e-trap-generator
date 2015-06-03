@@ -10,7 +10,9 @@ angular.module('5eGenerator.traps', ['ngRoute'])
 }])
 
 .controller('TrapsCtrl', ['$scope', 'trapData', '$routeParams', '$location',
-  function($scope, trapData, $routeParams, $location) {
+  '$route', function($scope, trapData, $routeParams, $location, $route) {
+
+  var lastRoute = undefined;
 
   $scope.trapDangers = trapData.dangers;
   $scope.trapSaves = trapData.saveDC;
@@ -25,9 +27,20 @@ angular.module('5eGenerator.traps', ['ngRoute'])
       ? $routeParams.danger : "Setback"
   };
 
+  // Change our path to match the form data.
   $scope.$watch('trap', function(newVal) {
     if(parseInt(newVal.level) && trapData.dangers.indexOf(newVal.danger) > -1) {
-      $location.path('/traps/' + newVal.level + '/' + newVal.danger)
+      lastRoute = $route.current;
+      $location.path('/traps/' + newVal.level + '/' + newVal.danger);
     }
   }, true);
+
+  // If we change the path above and it actually proceeds, we lose focus on our
+  // field. Prevent that.
+  $scope.$on('$locationChangeSuccess', function(event) {
+        if(lastRoute) {
+          $route.current = lastRoute;
+          lastRoute = undefined;
+        }
+    });
 }]);

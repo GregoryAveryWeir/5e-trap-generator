@@ -2,13 +2,16 @@
 
 <p>Generate a trap for the fifth edition of a popular tabletop RPG! Select the average level of your party and how dangerous you want the trap to be.</p>
 
-<form>
+<form name="form">
 <label for="trap-level">Party Level:</label>
-<input id="trap-level" type="number" ng-model="trap.level" min="1" max="20" />
+<input id="trap-level" name="trapLevel" type="number" integer required ng-model="trap.level" min="1" max="20" />
 <label for="trap-danger">Trap Danger:</label>
 <select id="trap-danger" ng-model="trap.danger"
     ng-options="value for value in trapDangers">
 </select>
+<p ng-show="form.trapLevel.$invalid" class="validation-error">
+    Level must be an integer between 1 and 20.
+</p>
 </form>
 
 <p><a href="#/traps">Reset Form</a></p>
