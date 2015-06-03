@@ -46,6 +46,10 @@ body {
   margin-top: 15px;
 }
 
+input.ng-invalid {
+  border-color: red;
+}
+
 .trap-results:after {
   content: "";
   clear: both;
