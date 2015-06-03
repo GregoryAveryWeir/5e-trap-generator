@@ -13,6 +13,9 @@ angular.module('myApp.traps', ['ngRoute'])
     function($scope, trapData) {
 
     $scope.trapDangers = trapData.dangers;
+    $scope.trapSaves = trapData.saveDC;
+    $scope.trapAttack = trapData.attackBonus;
+    $scope.trapDamage = trapData.damageSeverity;
 
     $scope.trap = {
         level: 1,

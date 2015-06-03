@@ -2,10 +2,18 @@
 
 <form>
 <label for="trap-level">Party Level:</label>
-<input id="trap-level" type="number" ng-model="trap.level" />
+<input id="trap-level" type="number" ng-model="trap.level" min="1" max="20" />
 <label for="trap-danger">Trap Danger:</label>
 <select id="trap-danger" ng-model="trap.danger"
     ng-options="value for value in trapDangers">
 </select>
-
 </form>
+
+<dl>
+    <dt>Save DC</dt>
+        <dd>{{ trapSaves[trap.danger] }}</dd>
+    <dt>Attack Bonus</dt>
+        <dd>{{ trapAttack[trap.danger] }}</dd>
+    <dt>Damage</dt>
+        <dd>{{ trapDamage(trap.level)[trap.danger] }}</dd>
+</dl>
