@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.traps module', function() {
+describe('5eGenerator.traps module', function() {
 
-  beforeEach(module('myApp.traps'));
+  beforeEach(module('5eGenerator.traps'));
 
   describe('traps controller', function(){
 

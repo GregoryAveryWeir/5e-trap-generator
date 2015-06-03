@@ -1,11 +1,11 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('5eGenerator', [
   'ngRoute',
-  'myApp.traps',
-  'myApp.version',
-  'myApp.data'
+  '5eGenerator.traps',
+  '5eGenerator.version',
+  '5eGenerator.data'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/traps'});

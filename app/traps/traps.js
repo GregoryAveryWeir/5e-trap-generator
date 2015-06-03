@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.traps', ['ngRoute'])
+angular.module('5eGenerator.traps', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/traps', {

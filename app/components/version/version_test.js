@@ -1,7 +1,7 @@
 'use strict';
 
-describe('myApp.version module', function() {
-  beforeEach(module('myApp.version'));
+describe('5eGenerator.version module', function() {
+  beforeEach(module('5eGenerator.version'));
 
   describe('version service', function() {
     it('should return current version', inject(function(version) {

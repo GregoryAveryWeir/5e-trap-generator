@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.data', [])
+angular.module('5eGenerator.data', [])
 .factory('trapData', function() {
     // In a larger-scale app, this would use $resource to pull data from some
     // RESTful endpoint, but there's so little data here that we don't need to
