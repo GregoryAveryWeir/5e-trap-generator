@@ -4,6 +4,16 @@ body {
   background: #6c5e41;
 }
 
+a:visited {
+  color: #4c3a13;
+}
+a:hover {
+  color: #551a8b;
+}
+a {
+  color: #4d6399;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
