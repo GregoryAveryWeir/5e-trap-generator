@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.traps',
-  'myApp.version'
+  'myApp.version',
+  'myApp.data'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/traps'});
