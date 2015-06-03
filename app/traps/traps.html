@@ -1,1 +1,11 @@
-<p>This is the partial for view 1.</p>
+<h1>Fifth Edition Trap Generator</h1>
+
+<form>
+<label for="trap-level">Party Level:</label>
+<input id="trap-level" type="number" ng-model="trap.level" />
+<label for="trap-danger">Trap Danger:</label>
+<select id="trap-danger" ng-model="trap.danger"
+    ng-options="value for value in trapDangers">
+</select>
+
+</form>

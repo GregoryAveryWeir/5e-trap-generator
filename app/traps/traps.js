@@ -9,6 +9,11 @@ angular.module('myApp.traps', ['ngRoute'])
   });
 }])
 
-.controller('TrapsCtrl', [function() {
+.controller('TrapsCtrl', ['$scope', function($scope) {
+    $scope.trapDangers = ["Setback", "Dangerous", "Deadly"];
 
+    $scope.trap = {
+        level: 1,
+        danger: "Setback"
+    };
 }]);
