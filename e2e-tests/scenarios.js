@@ -19,8 +19,8 @@ describe('my app', function() {
 
 
     it('should render traps when user navigates to /traps', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+      expect(element.all(by.css('[ng-view] h1')).first().getText()).
+        toMatch(/Fifth Edition Trap Generator/);
     });
 
   });

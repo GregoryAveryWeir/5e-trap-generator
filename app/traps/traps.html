@@ -17,5 +17,7 @@
     <dt class="trap-key">Attack Bonus</dt>
         <dd class="trap-value">{{ trapAttack[trap.danger] }}</dd>
     <dt class="trap-key">Damage</dt>
-        <dd class="trap-value">{{ trapDamage(trap.level)[trap.danger] }}</dd>
+        <dd class="trap-value">
+            <dice-roller ng-model="trapDamage(trap.level)[trap.danger]"></dice-roller>
+        </dd>
 </dl>

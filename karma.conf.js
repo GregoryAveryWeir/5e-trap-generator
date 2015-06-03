@@ -1,5 +1,8 @@
 module.exports = function(config){
   config.set({
+    preprocessors: {
+      'app/components/*.html': ['ng-html2js']
+    },
 
     basePath : './',
 
@@ -8,8 +11,15 @@ module.exports = function(config){
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/components/**/*.js',
-      'app/traps/**/*.js'
+      'app/traps/**/*.js',
+      'app/components/*.html'
     ],
+
+    ngHtml2JsPreprocessor: {
+        // If your build process changes the path to your templates,
+        // use stripPrefix and prependPrefix to adjust it.
+        stripPrefix: 'app/'
+    },
 
     autoWatch : true,
 
@@ -21,7 +31,8 @@ module.exports = function(config){
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-jasmine',
-            'karma-junit-reporter'
+            'karma-junit-reporter',
+            'karma-ng-html2js-preprocessor'
             ],
 
     junitReporter : {

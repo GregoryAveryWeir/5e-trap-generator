@@ -67,3 +67,7 @@ body {
 .trap-value {
   float: left;
 }
+
+.roll-results {
+  font-style: italic;
+}
