@@ -1,5 +1,9 @@
 /* app css stylesheet */
 
+body {
+  background: #6c5e41;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -27,4 +31,39 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+.main {
+  background: #041d1e;
+  color: white;
+  max-width: 960px;
+  margin: auto;
+  padding: 15px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.trap-results:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.trap-key {
+  font-weight: bold;
+  clear: left;
+  float: left;
+  width: 25%;
+}
+
+.trap-key:after {
+  content: ": ";
+  font-weight: bold;
+}
+
+.trap-value {
+  float: left;
 }

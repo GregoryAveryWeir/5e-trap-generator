@@ -1,5 +1,7 @@
 <h1>Fifth Edition Trap Generator</h1>
 
+<p>Select the average level of your party and how dangerous you want the trap to be.</p>
+
 <form>
 <label for="trap-level">Party Level:</label>
 <input id="trap-level" type="number" ng-model="trap.level" min="1" max="20" />
@@ -9,11 +11,11 @@
 </select>
 </form>
 
-<dl>
-    <dt>Save DC</dt>
-        <dd>{{ trapSaves[trap.danger] }}</dd>
-    <dt>Attack Bonus</dt>
-        <dd>{{ trapAttack[trap.danger] }}</dd>
-    <dt>Damage</dt>
-        <dd>{{ trapDamage(trap.level)[trap.danger] }}</dd>
+<dl class="trap-results">
+    <dt class="trap-key">Save DC</dt>
+        <dd class="trap-value">{{ trapSaves[trap.danger] }}</dd>
+    <dt class="trap-key">Attack Bonus</dt>
+        <dd class="trap-value">{{ trapAttack[trap.danger] }}</dd>
+    <dt class="trap-key">Damage</dt>
+        <dd class="trap-value">{{ trapDamage(trap.level)[trap.danger] }}</dd>
 </dl>

@@ -15,17 +15,19 @@
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
+  <nav>
   <ul class="menu">
     <li><a href="#/traps">Home</a></li>
   </ul>
+  </nav>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
+  <main class="main" ng-view></main>
 
-  <div>5e trap generator: v<span app-version></span></div>
+  <footer class="footer">5e trap generator: v<span app-version></span></footer>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
